@@ -17,3 +17,491 @@ floatgui
 floatgui
 verif =
    9.0072e+15
+a =
+  -100000000
+b =
+     1
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sqrt')" style="font-weight:bold">sqrt</a>
+Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo5', 'C:\Workspace\ws_mathNum\Exos\S2\Exo5.m', 5)" style="font-weight:bold">Exo5</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo5.m',5,0)">line 5</a>)
+x0 = sqrt*((a/2)^2 - b);
+
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo5.m',5,23)">File: Exo5.m Line: 5 Column: 23</a>
+Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise,
+check for mismatched delimiters.
+
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+Exo5
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+  -200000000
+a =
+  -100000000
+b =
+     1
+x0 =
+   5.0000e+07
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+  -200000000
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+  -200000000
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+  -200000000
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+results(1)
+ans =
+   1.0000e+08
+results(2)
+ans =
+   1.0000e-08
+results(1)*results(2)
+ans =
+     1
+results(1)+results(2)
+ans =
+   100000000
+ans-a
+ans =
+   200000000
+ans+a
+ans =
+   100000000
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('disp')" style="font-weight:bold">disp</a>
+Value must be a character vector or a string scalar.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo5', 'C:\Workspace\ws_mathNum\Exos\S2\Exo5.m', 10)" style="font-weight:bold">Exo5</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo5.m',10,0)">line 10</a>)
+disp("a = %d", x2)
+
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+  -200000000
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+ans =
+   1.0e+08 *
+    1.0000
+    0.0000
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+     0
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+ans =
+   1.0e+08 *
+    1.0000
+    0.0000
+Exo5
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+     0
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+ans =
+   1.0e+08 *
+    1.0000
+    0.0000
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+     0
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+ans =
+   1.0e+08 *
+    1.0000
+    0.0000
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+  -200000000
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+ans =
+   1.0e+08 *
+    1.0000
+    0.0000
+a^2-a*a
+ans =
+     0
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+  -200000000
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+ans =
+   1.0e+08 *
+    1.0000
+    0.0000
+x1*x2
+ans =
+    0.7451
+x1+x2
+ans =
+   100000000
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+  -200000000
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+ans =
+   1.0e+08 *
+    1.0000
+    0.0000
+x1+x
+{Unrecognized function or variable 'x'.} 
+x1+x2
+ans =
+   100000000
+a-x1
+ans =
+  -200000000
+x2
+x2 =
+   7.4506e-09
+x1
+x1 =
+   100000000
+x1+x2
+ans =
+   100000000
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+     0
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+ans =
+   1.0e+08 *
+    1.0000
+    0.0000
+a =
+  -100000000
+b =
+     1
+x1 =
+   100000000
+x2 =
+   7.4506e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+     0
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+ans =
+   1.0e+08 *
+    1.0000
+    0.0000
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+err_x2_b_1 =
+   2.5494e-09
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+err_x2_b_1 =
+   2.5494e-09
+err_x2_b_2 =
+   2.5494e-09
+x2_b_1 =
+   1.0000e-08
+x2_b_2 =
+     0
+x1_b_1 =
+   134217728
+x1_b_2 =
+   100000000
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+err_x1_b_1 =
+  -1.4901e-08
+err_x1_b_2 =
+  -1.4901e-08
+err_x2_b_1 =
+   2.5494e-09
+err_x2_b_2 =
+   2.5494e-09
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+err_x1_b_1 =
+  -3.4218e+07
+err_x1_b_2 =
+  -1.4901e-08
+err_x2_b_1 =
+   1.6544e-24
+err_x2_b_2 =
+   1.0000e-08
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+err_x1_b_1 =
+  -3.4218e+07
+err_x1_b_2 =
+  -1.4901e-08
+err_x2_b_1 =
+   1.6544e-24
+err_x2_b_2 =
+   1.0000e-08
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+err_x1_b_1 =
+  -3.4218e+07
+err_x1_b_2 =
+  -1.4901e-08
+err_x2_b_1 =
+   1.6544e-24
+err_x2_b_2 =
+   1.0000e-08
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+err_x1_b_1 =
+  -3.4218e+07
+err_x1_b_2 =
+  -1.4901e-08
+err_x2_b_1 =
+   1.6544e-24
+err_x2_b_2 =
+   1.0000e-08
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+err_x1_b_1 =
+  -3.4218e+07
+err_x1_b_2 =
+  -1.4901e-08
+err_x2_b_1 =
+   1.6544e-24
+err_x2_b_2 =
+   1.0000e-08
+results =
+   1.0e+08 *
+    1.0000
+    0.0000
+err_x1 =
+  -1.4901e-08
+err_x2 =
+   2.5494e-09
+err_x1_b_1 =
+  -3.4218e+07
+err_x1_b_2 =
+  -1.4901e-08
+err_x2_b_1 =
+   1.6544e-24
+err_x2_b_2 =
+   1.0000e-08
+     1
+    53
+clc
+clear
+     1
+    53
+     0
+        1075
+     0
+        1075
+     0
+        1075
+clear
+clc
+     0
+        1075
+   Inf
+        1024
