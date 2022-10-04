@@ -1,0 +1,179 @@
+% IEEE 754, double précision
+format long e
+eps
+ans =
+     2.220446049250313e-16
+2^-52
+ans =
+     2.220446049250313e-16
+% Plus petit nombre additionné à 1 donne quelque chose de différent de 1
+1 + eps
+ans =
+     1.000000000000000e+00
+1
+ans =
+     1
+(1 + eps) - 1
+ans =
+     2.220446049250313e-16
+eps/2
+ans =
+     1.110223024625157e-16
+2^-53
+ans =
+     1.110223024625157e-16
+clc
+1 + eps/2
+ans =
+     1
+1 + eps/2 + eps/2
+ans =
+     1
+1 + eps/2 + eps/2 + eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2
+ans =
+     1
+1 + (eps/2 + eps/2 + eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2+ eps/2 + eps/2)
+ans =
+     1.000000000000066e+00
+realmax
+ans =
+    1.797693134862316e+308
+realmax*2
+ans =
+   Inf
+realmax + 1
+ans =
+    1.797693134862316e+308
+realmax + 10
+ans =
+    1.797693134862316e+308
+realmax + 100
+ans =
+    1.797693134862316e+308
+realmax + 1000
+ans =
+    1.797693134862316e+308
+clc
+inf - inf
+ans =
+   NaN
+inf + -inf
+ans =
+   NaN
+0/0
+ans =
+   NaN
+1/0
+ans =
+   Inf
+-1/0
+ans =
+  -Inf
+inf/0
+ans =
+   Inf
+realmin
+ans =
+    2.225073858507201e-308
+clc
+realmax
+ans =
+    1.797693134862316e+308
+realmin
+ans =
+    2.225073858507201e-308
+realmin/2
+ans =
+    1.112536929253601e-308
+realmin/2^52
+ans =
+    4.940656458412465e-324
+realmin/2^53
+ans =
+     0
+clc
+% Série 2
+% Exercice 4
+clear all
+a = 4/3
+a =
+     1.333333333333333e+00
+b = a-1
+b =
+     3.333333333333333e-01
+c = 3*b
+c =
+     9.999999999999998e-01
+e = 1-c
+e =
+     2.220446049250313e-16
+eps
+ans =
+     2.220446049250313e-16
+pi
+ans =
+     3.141592653589793e+00
+2^-23
+ans =
+     1.192092895507813e-07
+clc
+realmin/2^53
+ans =
+     0
+realmin/2^52
+ans =
+    4.940656458412465e-324
+x = 1; q = 0;
+while x > 0
+x = x/2;
+q = q + 1;
+end
+q
+q =
+        1075
+1/2^1075
+ans =
+     0
+1/2^1074
+ans =
+     0
+1/2^1073
+ans =
+     0
+1/2^1072
+ans =
+     0
+1/2^1040
+ans =
+     0
+1/2^102'
+ans =
+     1.972152263052530e-31
+1/2^1020
+ans =
+    8.900295434028806e-308
+1/2^1025
+ans =
+     0
+1/2^1022
+ans =
+    2.225073858507201e-308
+realmin
+ans =
+    2.225073858507201e-308
+1/2^1023
+ans =
+    1.112536929253601e-308
+1/2^1025
+ans =
+     0
+1/2^1024
+ans =
+     0
+clc
+% Exercice 8
+1/10
+ans =
+     1.000000000000000e-01
+ % val abs-> abs(somme - 1) < 1e-5
+diary 02.10.19.txt
