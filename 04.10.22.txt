@@ -505,3 +505,1685 @@ clc
         1075
    Inf
         1024
+Detournement de fonds!
+somme
+somme =
+    1.0000
+format all
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('format')" style="font-weight:bold">format</a>
+Invalid format option all.} 
+help format
+ <strong>format</strong> Set output display format.
+    fmt = <strong>format</strong> returns the current display format.
+ 
+    <strong>format</strong> style changes the output display format. For a description of
+    possible values for style, see details below.
+ 
+    fmt = <strong>format</strong>(style) stores the current display format in fmt and then
+    changes the display format to the specified style.
+ 
+    <strong>format</strong>(fmt) changes the output display format to the fmt returned by a
+    previous call to <strong>format</strong>.
+ 
+    <strong>format</strong> does not affect how MATLAB computations are done. Computations
+    on float variables, namely single or double, are done in appropriate
+    floating point precision, no matter how those variables are displayed.
+    Computations on integer variables are done natively in integer. Integer
+    variables are always displayed to the appropriate number of digits for
+    the class, for example, 3 digits to display the INT8 range -128:127.
+    <strong>format</strong> SHORT and LONG do not affect the display of integer variables.
+ 
+    <strong>format</strong> DEFAULT may be used to restore the default display format,
+    which is SHORT for numeric format and LOOSE for line spacing.
+ 
+    <strong>format</strong> may be used to switch between different output display formats
+    of all float variables as follows:
+      <strong>format</strong> SHORT     Short fixed point format with 4 digits after the
+                       decimal point.
+      <strong>format</strong> LONG      Long fixed point format with 15 digits after the
+                       decimal point for double values and 7 digits after
+                       the decimal point for single values.
+      <strong>format</strong> SHORTE    Short scientific notation with 4 digits after the
+                       decimal point.
+      <strong>format</strong> LONGE     Long scientific notation with 15 digits after the
+                       decimal point for double values and 7 digits after
+                       the decimal point for single values.
+      <strong>format</strong> SHORTG    Short fixed format or scientific notation,
+                       whichever is more compact, with a total of 5 digits.
+      <strong>format</strong> LONGG     Long fixed format or scientific notation, whichever
+                       is more compact, with a total of 15 digits for
+                       double values and 7 digits for single values.
+      <strong>format</strong> SHORTENG  Engineering format with 4 digits after the decimal
+                       point and a power that is a multiple of three.
+      <strong>format</strong> LONGENG   Engineering format that has exactly 15 significant
+                       digits and a power that is a multiple of three.
+ 
+    <strong>format</strong> may be used to switch between different output display formats
+    of all numeric variables as follows:
+      <strong>format</strong> HEX       Hexadecimal format.
+      <strong>format</strong> +         The symbols +, - and blank are printed
+                       for positive, negative and zero elements.
+                       Imaginary parts are ignored.
+      <strong>format</strong> BANK      Currency format with 2 digits after the decimal
+                       point.
+      <strong>format</strong> RATIONAL  Approximation by ratio of small integers. Numbers
+                       with a large numerator or large denominator are
+                       replaced by *.
+ 
+    <strong>format</strong> may be used to affect the spacing in the display of all
+    variables as follows:
+      <strong>format</strong> COMPACT  Suppress excess blank lines to show more output.
+      <strong>format</strong> LOOSE    Add blank lines to make output more readable.
+ 
+    Example:
+       format short, pi, single(pi)
+    displays both double and single pi with 5 digits as 3.1416 while
+       format long, pi, single(pi)
+    displays pi as 3.141592653589793 and single(pi) as 3.1415927.
+ 
+       format, intmax('uint64'), realmax
+    shows these values as 18446744073709551615 and 1.7977e+308 while
+       format hex, intmax('uint64'), realmax
+    shows them as ffffffffffffffff and 7fefffffffffffff respectively.
+       fmt=format("hex"), intmax("uint64"), format(fmt)
+    shows ffffffffffffffff and restores the previous display format.
+    The HEX display corresponds to the internal representation of the value
+    and is not the same as the hexadecimal notation in the C programming
+    language.
+ 
+    See also <a href="matlab:help disp -displayBanner">disp</a>, <a href="matlab:help display -displayBanner">display</a>, <a href="matlab:help isnumeric -displayBanner">isnumeric</a>, <a href="matlab:help isfloat -displayBanner">isfloat</a>, <a href="matlab:help isinteger -displayBanner">isinteger</a>.
+
+    <a href="matlab:doc format">Documentation for format</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('format')">Other functions named format</a>
+
+display(somme)
+somme =
+    1.0000
+format long
+somme
+somme =
+   1.000000000000000
+somme  -1
+{Unrecognized function or variable 'somme'.} 
+somme-1
+ans =
+    -1.110223024625157e-16
+exp
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('exp')" style="font-weight:bold">exp</a>
+Not enough input arguments.} 
+esp
+{Unrecognized function or variable 'esp'.} 
+eps
+ans =
+     2.220446049250313e-16
+single(somme)
+ans =
+  <a href="matlab:helpPopup single" style="font-weight:bold">single</a>
+     1
+helpPopup single
+help single
+ <strong>single</strong> Convert to single precision.
+    Y = <strong>single</strong>(X) converts the vector X to single precision. X can be any
+    numeric object (such as a DOUBLE). If X is already single precision,
+    <strong>single</strong> has no effect.  Single precision quantities require less storage
+    than double precision quantities, but have less precision and a
+    smaller range. REALMAX('single') gives the upper bound for <strong>single</strong> while
+    REALMIN('single') is the smallest positive normalized <strong>single</strong> value.
+ 
+    Most operations that are defined on DOUBLE arrays are also defined for
+    <strong>single</strong> arrays. When <strong>single</strong> and DOUBLE arrays interact in arithmetic,
+    the type of the result is <strong>single</strong>.
+ 
+    You can define or overload your own methods for the <strong>single</strong> class (as you
+    can for any object) by placing the appropriately named method in an @single
+    directory within a directory on your path. 
+    See DATATYPES for the names of the methods you can overload.
+ 
+    A particularly efficient way to initialize a large <strong>single</strong> array is:
+ 
+        S = zeros(1000,1000,'single')
+ 
+    which creates a 1000x1000 element <strong>single</strong> array, all of whose entries are
+    zero. You can also use ONES and EYE in a similar manner.
+ 
+    Example:
+       X = pi * ones(5,6,'single')
+ 
+    See also <a href="matlab:help double -displayBanner">double</a>, <a href="matlab:help datatypes -displayBanner">datatypes</a>, <a href="matlab:help uint8 -displayBanner">uint8</a>, <a href="matlab:help uint16 -displayBanner">uint16</a>, <a href="matlab:help uint32 -displayBanner">uint32</a>, <a href="matlab:help uint64 -displayBanner">uint64</a>, <a href="matlab:help int8 -displayBanner">int8</a>, <a href="matlab:help int16 -displayBanner">int16</a>,
+    <a href="matlab:help int32 -displayBanner">int32</a>, <a href="matlab:help int64 -displayBanner">int64</a>, <a href="matlab:help realmin -displayBanner">realmin</a>, <a href="matlab:help realmax -displayBanner">realmax</a>, <a href="matlab:help eye -displayBanner">eye</a>, <a href="matlab:help ones -displayBanner">ones</a>, <a href="matlab:help zeros -displayBanner">zeros</a>, <a href="matlab:help isfloat -displayBanner">isfloat</a>, <a href="matlab:help isnumeric -displayBanner">isnumeric</a>.
+
+    <a href="matlab:doc single">Documentation for single</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('single')">Other functions named single</a>
+
+Detournement de fonds!
+Le compte est bon
+Exo8
+Detournement de fonds!
+Le compte est bon
+Detournement de fonds!
+Conversion en single :
+Le compte est bon
+Detournement de fonds!
+\r\nConversion en single :
+Le compte est bon
+Detournement de fonds!
+\r Conversion en single :
+Le compte est bon
+Detournement de fonds!
+Conversion en single :
+Le compte est bon
+Detournement de fonds!
+##Conversion en single :
+Le compte est bon
+Detournement de fonds!
+## Conversion en single :
+Le compte est bon
+clc
+Exo7
+{<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',9,3)">File: Exo7.m Line: 9 Column: 3</a>
+Incorrect use of '=' operator. Assign a value to a variable using '=' and compare values for
+equality using '=='.} 
+Exo7
+{<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',9,3)">File: Exo7.m Line: 9 Column: 3</a>
+Incorrect use of '=' operator. Assign a value to a variable using '=' and compare values for
+equality using '=='.} 
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',15,4)">File: Exo7.m Line: 15 Column: 4</a>
+Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise,
+check for mismatched delimiters.
+
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',15,4)">File: Exo7.m Line: 15 Column: 4</a>
+Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise,
+check for mismatched delimiters.
+
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',15,4)">File: Exo7.m Line: 15 Column: 4</a>
+Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise,
+check for mismatched delimiters.
+
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',15,4)">File: Exo7.m Line: 15 Column: 4</a>
+Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise,
+check for mismatched delimiters.
+
+opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',15,4)
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',8,10)">File: Exo7.m Line: 8 Column: 10</a>
+Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise,
+check for mismatched delimiters.
+
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',15,4)">File: Exo7.m Line: 15 Column: 4</a>
+Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise,
+check for mismatched delimiters.
+
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo7', 'C:\Workspace\ws_mathNum\Exos\S2\Exo7.m', 11)" style="font-weight:bold">Exo7</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',11,0)">line 11</a>)
+    ErrRel = y(i)/exp(x) - 1;
+
+clear
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo7', 'C:\Workspace\ws_mathNum\Exos\S2\Exo7.m', 11)" style="font-weight:bold">Exo7</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',11,0)">line 11</a>)
+    ErrRel = y(i)/exp(x) - 1;
+
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+y =
+  Columns 1 through 4
+   0.375000000000000   0.389022050949085   0.403878707174801   0.419574131873763
+  Columns 5 through 8
+   0.436115263706992   0.453511816799921   0.471776280742388   0.490923920588644
+  Columns 9 through 12
+   0.510972776857345   0.531943665531560   0.553860178058763   0.576748681350839
+  Columns 13 through 16
+   0.600638317784083   0.625561005199196   0.651551436901291   0.678647081659887
+  Columns 17 through 20
+   0.706888183708914   0.736317762746711   0.766981613936023   0.798928307904008
+  Columns 21 through 24
+   0.832209190742230   0.866878384006664   0.902992784717692   0.940612065360105
+  Columns 25 through 28
+   0.979798673883105   1.020617833700302   1.063137543689713   1.107428578193766
+  Columns 29 through 32
+   1.153564487019297   1.201621595437553   1.251679004184186   1.303818589459260
+  Columns 33 through 36
+   1.358125002927248   1.414685671717029   1.473590798421894   1.534933361099542
+  Columns 37 through 40
+   1.598809113272080   1.665316583926025   1.734557077512303   1.806634673946247
+  Columns 41 through 44
+   1.881656228607602   1.959731372340520   2.040972511453561   2.125494827719696
+  Columns 45 through 48
+   2.213416278376304   2.304857596125174   2.399942289132501   2.498796641028893
+  Columns 49 through 50
+   2.601549710909362   2.708333333333333
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo7', 'C:\Workspace\ws_mathNum\Exos\S2\Exo7.m', 11)" style="font-weight:bold">Exo7</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',11,0)">line 11</a>)
+    ErrRel = y(i)/exp(x) - 1;
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo7', 'C:\Workspace\ws_mathNum\Exos\S2\Exo7.m', 11)" style="font-weight:bold">Exo7</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',11,0)">line 11</a>)
+    ErrRel = y(i)/exp(x) - 1;
+
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo7', 'C:\Workspace\ws_mathNum\Exos\S2\Exo7.m', 11)" style="font-weight:bold">Exo7</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',11,0)">line 11</a>)
+    ErrRel = y(i)/exp(x) - 1;
+
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo7', 'C:\Workspace\ws_mathNum\Exos\S2\Exo7.m', 9)" style="font-weight:bold">Exo7</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',9,0)">line 9</a>)
+        ErrRel(i) = y(i)/exp(x) - 1;
+
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo7', 'C:\Workspace\ws_mathNum\Exos\S2\Exo7.m', 9)" style="font-weight:bold">Exo7</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',9,0)">line 9</a>)
+        ErrRel(i) = y(i)/exp(x) - 1;
+
+Exo7
+if system_dependent('IsDebugMode')==1, dbstep; end
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo7', 'C:\Workspace\ws_mathNum\Exos\S2\Exo7.m', 9)" style="font-weight:bold">Exo7</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',9,0)">line 9</a>)
+        ErrRel(i) = y(i)/exp(x) - 1;} 
+Exo7
+y(i)
+ans =
+   0.375000000000000
+exp(x)
+ans =
+  Columns 1 through 4
+   0.367879441171442   0.383205579208843   0.399170215843484   0.415799951413798
+  Columns 5 through 8
+   0.433122494448603   0.451166707835154   0.469962656910598   0.489541659556953
+  Columns 9 through 12
+   0.509936338383084   0.531180675080615   0.553310067044357   0.576361386351579
+  Columns 13 through 16
+   0.600373041198404   0.625385039895697   0.651439057531056   0.678578505408009
+  Columns 17 through 20
+   0.706848603378092   0.736296455186337   0.766971126955710   0.798923728941277
+  Columns 21 through 24
+   0.832207500690301   0.866877899750182   0.902992694072030   0.940612058263851
+  Columns 25 through 28
+   0.979798673853704   1.020617833729903   1.063137550932278   1.107428671975758
+  Columns 29 through 32
+   1.153564994895108   1.201623392207494   1.251683938997764   1.303830046339862
+  Columns 33 through 36
+   1.358148600276674   1.414730106589885   1.473668841601061   1.535063009255210
+  Columns 37 through 40
+   1.599014904748573   1.665631084973270   1.735022546062798   1.807304908334215
+  Columns 41 through 44
+   1.882598608935150   1.961029102516639   2.042727070266142   2.127828637649039
+  Columns 45 through 48
+   2.216475601221394   2.308815664891922   2.405002686026805   2.505196931807418
+  Columns 49 through 50
+   2.609565346268121   2.718281828459045
+if system_dependent('IsDebugMode')==1, dbquit; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+if system_dependent('IsDebugMode')==1, dbquit all; end
+Exo7
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('exp')" style="font-weight:bold">exp</a>
+Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Exo7', 'C:\Workspace\ws_mathNum\Exos\S2\Exo7.m', 11)" style="font-weight:bold">Exo7</a> (<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',11,0)">line 11</a>)
+    ErrRel = y/exp - 1;} 
+y/exp
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('exp')" style="font-weight:bold">exp</a>
+Not enough input arguments.} 
+Exo7
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',11,24)">File: Exo7.m Line: 11 Column: 24</a>
+Invalid use of operator.
+
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',11,25)">File: Exo7.m Line: 11 Column: 25</a>
+Invalid use of operator.
+
+Exo7
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',14,1)">14  </a>    plot(ErrRel);
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+Exo7
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit all; end
+Exo7
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',13,1)">13  </a>    subplot(2, 2, k)
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\Exo7.m',13,1)">13  </a>    subplot(2, 2, k)
+if system_dependent('IsDebugMode')==1, dbcont; end
+Exo7
+Exo7
+Exo7
