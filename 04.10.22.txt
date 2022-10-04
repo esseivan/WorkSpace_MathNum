@@ -1,0 +1,19 @@
+disp 'Devoir pour le 05.10.22 faits le 04.10.22'
+Devoir pour le 05.10.22 faits le 04.10.22
+floatgui
+{Unrecognized function or variable 'floatgui'.} 
+floatgui
+floatgui
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\floatgui.m',146,1)">146 </a>text(.9*xmax,2,num2str(t))
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\floatgui.m',146,1)">146 </a>text(.9*xmax,2,num2str(t))
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\floatgui.m',146,1)">146 </a>text(.9*xmax,2,num2str(t))
+<a href="matlab: opentoline('C:\Workspace\ws_mathNum\Exos\S2\floatgui.m',146,1)">146 </a>text(.9*xmax,2,num2str(t))
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit all; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+floatgui
+floatgui
+verif =
+   9.0072e+15
