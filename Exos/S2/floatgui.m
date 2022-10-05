@@ -150,4 +150,4 @@ end
 % Exposant : On multiplie le resultat ci-dessus par le nombre d'exposants
 %   differents possibles. Si emin est -2 et emax 2 on aura 5 possibilites
 text(.9*xmax,2,num2str((2^t)*(-emin + emax + 1)))
-verif = (2^52)*(-1022+1023+1)
+%verif = (2^52)*(-1022+1023+1)
