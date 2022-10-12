@@ -1,0 +1,170 @@
+clear
+%Chapitre 2 : recherche de zéros
+% Exemple. trouves les zéros de la f(x) = 3*x + sin(x) - exp(x)
+% 1. Dessiner la fonction
+f = @(x) 3x+sin(x)-exp(x)
+ f = @(x) 3x+sin(x)-exp(x)
+           ↑
+{Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax
+error. To construct matrices, use brackets instead of parentheses.
+} 
+f = @(x) 3*x+sin(x)-exp(x)
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)3*x+sin(x)-exp(x)
+f(1)
+ans =
+    1.1232
+f(2)
+ans =
+   -0.4798
+ezploz(f)
+{Unrecognized function or variable 'ezploz'.} 
+ezplot(f)
+grid
+ezplot(f)
+grid
+fplot(f)
+grid on
+ezplot(f)
+grid
+ezplot(f, [0,2])
+grid
+ezplot(f, [0,2]); grid;
+fzero(f, 0.3)
+ans =
+    0.3604
+fzero(f, 0.4)
+ans =
+    0.3604
+fzero(f, 1.9)
+ans =
+    1.8900
+f(1.89)
+ans =
+   1.1693e-04
+x1 = fzero(0.3)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fzero')" style="font-weight:bold">fzero</a>
+FZERO requires at least two input arguments or a structure with valid fields.} 
+x1 = fzero(f, 0.3)
+x1 =
+    0.3604
+f(x1)
+ans =
+     0
+x2 = fzero(f, 1.9)
+x2 =
+    1.8900
+f(x2)
+ans =
+     0
+f(0.36)
+ans =
+   -0.0011
+bissection(f, 0.2, 1, 1e-5)
+ans =
+    0.3000
+bissection(f, 0.2, 1, 1e-8)
+ans =
+    0.3000
+bissection(f, 0.2, 1, 1e-16)
+ans =
+    0.3000
+f(ans)
+ans =
+   -0.1543
+bissection
+{Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Ch2\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Ch2\bissection.m',5,0)">line 5</a>)
+while abs(a-b) > tolerance*abs(b) % erreur relative} 
+bissection(f, 0.2, 1, 1e-16)
+ans =
+    0.3000
+bissection
+{Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Ch2\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Ch2\bissection.m',5,0)">line 5</a>)
+while abs(a-b) > tolerance*abs(b) % erreur relative} 
+bissection(f, 0.2, 1, 1e-16)
+ans =
+    0.3000
+bissection(f, 0.2, 1, 1)
+ans =
+    0.6000
+bissection(f, 0.2, 1, 1)
+ans =
+    0.6000
+bissection(f, 0.2, 1, 1e-16)
+ans =
+    0.3000
+format long
+bissection(f, 0.2, 1, 1e-16)
+ans =
+   0.300000000000000
+bissection
+{Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Ch2\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Ch2\bissection.m',5,0)">line 5</a>)
+while abs(a-b) > tolerance*abs(b) % erreur relative} 
+bissection(f, 0.2, 1, 1e-16)
+<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Ch2\bissection.m',6,1)">6   </a>    c = (a+b)/2;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Ch2\bissection.m',7,1)">7   </a>    if f(a)*f(b) < 0
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+a-b
+ans =
+  -0.100000000000000
+0.1
+ans =
+   0.100000000000000
+0.1*b
+ans =
+   0.030000000000000
+abs(a-b)
+ans =
+   0.100000000000000
+tolerance*abs(b)
+ans =
+     3.000000000000001e-17
+abs(a-b)>ans
+ans =
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+   1
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+bissection(f, 0.2, 1, 1e-16)
+<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Ch2\bissection.m',6,1)">6   </a>    c = (a+b)/2;
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+bissection(f, 0.2, 1, 1e-16)
+ans =
+   0.360421702960324
