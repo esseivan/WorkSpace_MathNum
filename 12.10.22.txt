@@ -1,0 +1,298 @@
+a = [1 3 5 7]
+a =
+     1     3     5     7
+b = [-2 -4]
+b =
+    -2    -4
+help reshape
+ <strong>reshape</strong> Reshape array.
+    <strong>reshape</strong>(X,M,N) or <strong>reshape</strong>(X,[M,N]) returns the M-by-N matrix 
+    whose elements are taken columnwise from X. An error results 
+    if X does not have M*N elements.
+ 
+    <strong>reshape</strong>(X,M,N,P,...) or <strong>reshape</strong>(X,[M,N,P,...]) returns an 
+    N-D array with the same elements as X but reshaped to have 
+    the size M-by-N-by-P-by-.... The product of the specified
+    dimensions, M*N*P*..., must be the same as NUMEL(X).
+ 
+    <strong>reshape</strong>(X,...,[],...) calculates the length of the dimension
+    represented by [], such that the product of the dimensions 
+    equals NUMEL(X). The value of NUMEL(X) must be evenly divisible 
+    by the product of the specified dimensions. You can use only one 
+    occurrence of [].
+ 
+    See also <a href="matlab:help squeeze -displayBanner">squeeze</a>, <a href="matlab:help shiftdim -displayBanner">shiftdim</a>, <a href="matlab:help colon -displayBanner">colon</a>.
+
+    <a href="matlab:doc reshape">Documentation for reshape</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('reshape')">Other functions named reshape</a>
+
+c = reshape(a,b(
+ c = reshape(a,b(
+                 ↑
+{Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched delimiters.
+} 
+c = reshape(a,b)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('reshape')" style="font-weight:bold">reshape</a>
+Size vector elements should be nonnegative.} 
+c = reshape(a,b,1)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('reshape')" style="font-weight:bold">reshape</a>
+Size arguments must be integer scalars.} 
+c = reshape([a; b], [], 1)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of arrays being concatenated are not consistent.} 
+upsample
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('upsample')" style="font-weight:bold">upsample</a>
+Not enough input arguments.} 
+upsample(b, 4)
+ans =
+    -2     0     0     0    -4     0     0     0
+upsample(b, 2)
+ans =
+    -2     0    -4     0
+upsample(b, 1)
+ans =
+    -2    -4
+upsample(b, 2)
+ans =
+    -2     0    -4     0
+upsample(b, 3)
+ans =
+    -2     0     0    -4     0     0
+help upsample
+ <strong>upsample</strong> Upsample input signal.
+    <strong>upsample</strong>(X,N) upsamples input signal X by inserting
+    N-1 zeros between input samples.  X may be a vector
+    or a signal matrix (one signal per column).
+ 
+    <strong>upsample</strong>(X,N,PHASE) specifies an optional sample offset.
+    PHASE must be an integer in the range [0, N-1].
+ 
+    % Example 1:
+    %   Increase the sampling rate of a sequence by 3.
+ 
+    x = [1 2 3 4];      % Defining data
+    y = upsample(x,3)   % Upsample input signal
+ 
+    % Example 2:
+    %   Increase the sampling rate of the sequence by 3 and add a
+    %   phase offset of 2.
+ 
+    x = [1 2 3 4];      % Defining data
+    y = upsample(x,3,2) % Upsample by 3 and adding phase offset of 2
+ 
+    % Example 3:
+    %   Increase the sampling rate of a matrix by 3.
+ 
+    x = [1 2; 3 4; 5 6;];   % Defining data
+    y = upsample(x,3)       % Increasing sampling rate
+ 
+    See also <a href="matlab:help downsample -displayBanner">downsample</a>, <a href="matlab:help upfirdn -displayBanner">upfirdn</a>, <a href="matlab:help interp -displayBanner">interp</a>, <a href="matlab:help decimate -displayBanner">decimate</a>, <a href="matlab:help resample -displayBanner">resample</a>.
+
+    <a href="matlab:doc upsample">Documentation for upsample</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('upsample')">Other functions named upsample</a>
+
+help downsample -displayBanner
+--- help for <strong>downsample</strong> ---
+
+ <strong>downsample</strong> Downsample input signal.
+    <strong>downsample</strong>(X,N) downsamples input signal X by keeping every
+    N-th sample starting with the first. If X is a matrix, the
+    downsampling is done along the columns of X.
+ 
+    <strong>downsample</strong>(X,N,PHASE) specifies an optional sample offset.
+    PHASE must be an integer in the range [0, N-1].
+ 
+    % Example 1:
+    %   Decrease the sampling rate of a sequence by 3.
+ 
+    x = [1 2 3 4 5 6 7 8 9 10];
+    y = downsample(x,3)
+ 
+    % Example 2:
+    %   Decrease the sampling rate of the sequence by 3 and add a 
+    %   phase offset of 2.
+ 
+    x = [1 2 3 4 5 6 7 8 9 10];
+    y = downsample(x,3,2)
+ 
+    % Example 3:
+    %   Decrease the sampling rate of a matrix by 3.
+ 
+    x = [1 2 3; 4 5 6; 7 8 9; 10 11 12];
+    y = downsample(x,3)
+ 
+    See also <a href="matlab:help upsample -displayBanner">upsample</a>, <a href="matlab:help upfirdn -displayBanner">upfirdn</a>, <a href="matlab:help interp -displayBanner">interp</a>, <a href="matlab:help decimate -displayBanner">decimate</a>, <a href="matlab:help resample -displayBanner">resample</a>.
+
+    <a href="matlab:doc downsample">Documentation for downsample</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('downsample')">Other functions named downsample</a>
+
+help resample -displayBanner
+--- help for <strong>resample</strong> ---
+
+ <strong>resample</strong>  Resample uniform or nonuniform data to a new fixed rate.
+    Y = <strong>resample</strong>(X,P,Q) resamples the values, X, of a uniformly sampled
+    signal at P/Q times the original sample rate using a polyphase
+    antialiasing filter. If X is a matrix, then <strong>resample</strong> treats each
+    column as an independent channel.
+ 
+    In its filtering process, <strong>resample</strong> assumes the samples at times before
+    and after the given samples in X are equal to zero. Thus large
+    deviations from zero at the end points of the sequence X can cause
+    inaccuracies in Y at its end points.
+ 
+    [Y,Ty] = <strong>resample</strong>(X,Tx) resamples the values, X, of a signal sampled at
+    the instants specified in vector Tx. <strong>resample</strong> interpolates X linearly
+    onto a vector of uniformly spaced instants, Ty, with the same endpoints
+    and number of samples as Tx.  Tx may either be a numeric vector
+    expressed in seconds or a datetime object.  NaNs and NaTs (for datetime
+    objects) are treated as missing data and are ignored.
+ 
+    [Y,Ty] = <strong>resample</strong>(X,Tx,Fs) uses interpolation and an anti-aliasing
+    filter to resample the signal at a uniform sample rate, Fs, expressed
+    in hertz (Hz).
+ 
+    [Y,Ty] = <strong>resample</strong>(X,Tx,Fs,P,Q) interpolates X to an intermediate
+    uniform grid with sample rate equal Q*Fs/P and filters the result
+    using UPFIRDN to upsample by P and downsample by Q.  Specify P and Q
+    so that Q*Fs/P is least twice as large as the highest frequency in the
+    input signal.
+ 
+    [Y,Ty] = <strong>resample</strong>(X,Tx,...,METHOD) specifies the interpolation method.
+    The default is linear interpolation.  Available methods are:
+      'linear' - linear interpolation
+      'pchip'  - shape-preserving piecewise cubic interpolation
+      'spline' - piecewise cubic spline interpolation
+ 
+    Y = <strong>resample</strong>(...,P,Q,N) uses a weighted sum of 2*N*max(1,Q/P) samples
+    of X to compute each sample of Y.  The length of the FIR filter
+    <strong>resample</strong> applies is proportional to N; by increasing N you will get
+    better accuracy at the expense of a longer computation time.
+    <strong>resample</strong> uses N = 10 by default. If N = 0, <strong>resample</strong> performs
+    nearest neighbor interpolation: the output Y(n) is
+    X(round((n-1)*Q/P)+1), with Y(n) = 0 for round((n-1)*Q/P)+1 > length(X)).
+ 
+    Y = <strong>resample</strong>(...,P,Q,N,BTA) uses BTA as the BETA design parameter for
+    the Kaiser window used to design the filter.  <strong>resample</strong> uses BTA = 5 if
+    you don't specify a value.
+ 
+    Y = <strong>resample</strong>(...,P,Q,B) uses B to filter X (after upsampling) if B is a
+    vector of filter coefficients.  <strong>resample</strong> assumes B has odd length and
+    linear phase when compensating for the filter's delay; for even length
+    filters, the delay is overcompensated by 1/2 sample.  For non-linear
+    phase filters consider using UPFIRDN.
+ 
+    [Y,B] = <strong>resample</strong>(X,P,Q,...) returns in B the coefficients of the filter
+    applied to X during the resampling process (after upsampling).
+ 
+    [Y,Ty,B] = <strong>resample</strong>(X,Tx,...) returns in B the coefficients of the
+    filter applied to X during the resampling process (after upsampling).
+ 
+    Y = resample(...,'Dimension',DIM) specifies the dimension, DIM,
+    along which to resample an N-D input array. If DIM is not specified,
+    resample operates along the first array dimension with size greater
+    than 1.
+ 
+    [Y,B] = <strong>resample</strong>(TT,...) resamples the data in timetable TT and returns
+    a timetable Y. TT must contain double-precision data and must have at
+    least two rows. Each variable in TT is treated as an independent
+    signal. If TT has an N-D array as a variable, then <strong>resample</strong> operates
+    along the first dimension. In other words, it treats columns as
+    channels. The RowTimes in TT may either be a duration vector or a
+    datetime object with unique and finite values. If RowTimes in TT are
+    not sorted, then <strong>resample</strong> sorts them in an ascending order. Non-finite
+    time values (NaNs and NaTs) are treated as missing data and are
+    ignored. You can replace X,Tx with a nonuniformly sampled timetable TT
+    in the above syntaxes that use X and Tx as inputs. You can replace X
+    with a uniformly sampled timetable TT in all the other syntaxes. Use
+    isregular to check if TT is uniformly sampled or not.
+ 
+    % EXAMPLE 1:
+    %   Resample a sinusoid at 3/2 the original rate.
+ 
+    tx = 0:3:300-3;         % Time vector for original signal
+    x = sin(2*pi*tx/300);   % Define a sinusoid
+    ty = 0:2:300-2;         % Time vector for resampled signal
+    y = resample(x,3,2);    % Change sampling rate
+    plot(tx,x,'+-',ty,y,'o:')
+    legend('Original','Resampled');
+    xlabel('Time')
+ 
+    % EXAMPLE 2:
+    %   Resample a non-uniformly sampled sinusoid to a uniform 50 Hz rate.
+ 
+    Fs = 50;
+    tx = linspace(0,1,21) + .012*rand(1,21);
+    x = sin(2*pi*tx);
+    [y, ty] = resample(x, tx, Fs);
+    plot(tx,x,'+-',ty,y,'o:')
+    legend('Original','Resampled');
+    xlabel('Time')
+ 
+    % EXAMPLE 3:
+    %   Resample a multichannel sinusoid by 3/2 along its second dimension.
+ 
+    p = 3;
+    q = 2;
+    tx = 0:3:300-3;
+    x = cos(2*pi*tx./(1:5)'/100);
+    y = resample(x,p,q,'Dimension',2);
+    ty = 0:2:300-2;
+    plot(tx,x,'+-',ty,y,'o:')
+    legend('Original','Resampled');
+    xlabel('Time')
+ 
+    % EXAMPLE 4:
+    %   Resample a 3D random signal along its second dimension at twice the
+    %  original rate.
+ 
+    tx = 0:2:38;
+    x = rand(100,20,5);
+    ty = 0:39;
+    y = resample(x,2,1,'Dimension',2);
+    plot(tx,x(1,:,1),'+-',ty,y(1,:,1),'o:')
+    legend('Original','Resampled');
+    xlabel('Time')
+ 
+    % EXAMPLE 5:
+    %   Resample an input timetable to 3/2 times the original rate.
+ 
+    tx = 0:3:300-3;
+    x = sin(2*pi*tx/300);
+    xTT = timetable(seconds(tx)',x');
+    yTT = resample(xTT,3,2);
+    y = table2array(yTT);
+    ty = seconds(yTT.Properties.RowTimes);
+    plot(tx,x,'+-',ty,y,'o:')
+    legend('Original','Resampled');
+    xlabel('Time')
+ 
+    See also <a href="matlab:help upfirdn -displayBanner">upfirdn</a>, <a href="matlab:help interp -displayBanner">interp</a>, <a href="matlab:help interp1 -displayBanner">interp1</a>, <a href="matlab:help decimate -displayBanner">decimate</a>, <a href="matlab:help firls -displayBanner">firls</a>, <a href="matlab:help kaiser -displayBanner">kaiser</a>, <a href="matlab:help intfilt -displayBanner">intfilt</a>.
+
+    <a href="matlab:doc resample">Documentation for resample</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('resample')">Other functions named resample</a>
+
+a
+a =
+     1     3     5     7
+b
+b =
+    -2    -4
+c
+{Unrecognized function or variable 'c'.} 
+c = upsample(b,2)
+c =
+    -2     0    -4     0
+c = upsample(a, 2)
+c =
+     1     0     3     0     5     0     7     0
+a
+a =
+     1     3     5     7
+b
+b =
+    -2    -4
+c = [a;b]
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of arrays being concatenated are not consistent.} 
+clear
+clc

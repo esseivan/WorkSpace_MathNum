@@ -9,16 +9,17 @@ M1 = -2;
 M2 = 2;
 
 sz = b^n*(M2-M1+1);
-Result = zeros(sz, 1);
+Result = zeros(1, sz);
 i = 0;
 % M1 : exposant minimum
 % M2 : exposant maximum
 for k = M1:M2
     % Pour chaque exposant
-    for m = 0:b^n
+    for m = 0:b^n-1
         %disp("Number is : m="+m+"; e="+k);
         i = i+1;
-        Result(i) = (1+m*b^(-n))*b^k;
+        res = (1+m*b^(-n))*b^k
+        Result(i) = res;
     end
 end
 
