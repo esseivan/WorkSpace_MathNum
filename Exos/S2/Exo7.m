@@ -8,7 +8,9 @@ for n = [4 8 16 20]
         y(i) = mon_exp(x(i), n);
     end
     % err_rel = (calc-reel)/reel
-    ErrRel = (y./exp(x)) -1;
+    %ErrRel = (y./exp(x)) -1;
+    %ErrRel = abs(y-exp(x))./abs(exp(x));
+    ErrRel =     (y-exp(x))./abs(exp(x));
     k = k + 1;
     AllErr(k) = {ErrRel};
     subplot(3, 2, k)
