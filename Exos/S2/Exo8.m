@@ -1,4 +1,5 @@
 %% Ex 8
+disp("#### Ex 8");
 
 somme = 0; % somme est une variable en double precision
 for i = 1:10
@@ -17,10 +18,20 @@ end
 
 % b) On peut le convertir en single-precision pour enlever ces petites
 % erreurs de calculs :
-disp('## Conversion en single :');
-somme = single(somme);
+% disp('## Conversion en single :');
+% sommeNew = single(somme);
+% 
+% if sommeNew == 1
+% disp('Le compte est bon')
+% else
+% disp('Detournement de fonds!')
+% end
 
-if somme == 1
+% b) Autrement, on compare l'erreur absolue avec une tolérance :
+
+tolerance = 1e-8;
+errAbs = abs(somme - 1)
+if errAbs < tolerance
 disp('Le compte est bon')
 else
 disp('Detournement de fonds!')
