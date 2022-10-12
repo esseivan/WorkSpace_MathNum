@@ -1,4 +1,4 @@
-function floatgui(callbackarg)
+function F=floatgui(callbackarg)
 %FLOATGUI  Show structure of floating point numbers.
 %  The set of positive model floating point numbers is determined
 %  by three parameters: t, emin, and emax.  It is the set of rational
@@ -14,7 +14,7 @@ function floatgui(callbackarg)
 
 if nargin == 0
    t = 3;
-   emin = -4;
+   emin = -2;
    emax = 2;
    logscale = 0;
    Fpos=[50 300 900 250];
@@ -44,7 +44,7 @@ end
 for x = F
    text(x,0,'|','fontunits','normalized','fontsize',0.3)
 end
-
+disp(F)
 % Set axes
 
 set(gca,'pos',[.05 .6 .9 .2],'fontunits','normalized','fontsize',0.22)
