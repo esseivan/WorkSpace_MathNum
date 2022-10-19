@@ -1,0 +1,300 @@
+f = @(x) 3*x+sin(x)-exp(x)
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)3*x+sin(x)-exp(x)
+fp = @(x) 3+cos(x)-exp(x)
+fp =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)3+cos(x)-exp(x)
+Newton(f, fp, 0, 1e-5)
+{'Newton' is not found in the current folder or on the MATLAB path, but exists in:
+    C:\Workspace\Github\ws_mathNum\Exos\S3
+
+<a href = "matlab:matlab.internal.language.commandline.executeCode('cd ''C:\Workspace\Github\ws_mathNum\Exos\S3''')">Change the MATLAB current folder</a> or <a href = "matlab:matlab.internal.language.commandline.executeCode('addpath ''C:\Workspace\Github\ws_mathNum\Exos\S3''')">add its folder to the MATLAB path</a>.} 
+Newton(f, fp, 0, 1e-5)
+ans =
+    0.3333
+f(ans)
+ans =
+   -0.0684
+Newton(f, fp, 2, 1e-5)
+ans =
+    1.9002
+zeros(f)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('zeros')" style="font-weight:bold">zeros</a>
+Size inputs must be numeric.} 
+zero(f)
+{Check for incorrect argument data type or missing argument in call to function 'zero'.} 
+fzero(f)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fzero')" style="font-weight:bold">fzero</a>
+FZERO requires at least two input arguments or a structure with valid fields.} 
+Newton(f, fp, 0, 1e-5)
+ans =
+    0.3604
+f(ans)
+ans =
+  -6.6613e-16
+Newton(f, fp, 2, 1e-5)
+ans =
+    1.8900
+f(ans)
+ans =
+     0
+f = @(x) x^2 - 2
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)x^2-2
+fp = @(x) 2*x
+fp =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)2*x
+Newton(f, fp, 0, 1e-5)
+ans =
+   Inf
+Newton(f, fp, 2, 1e-5)
+ans =
+    1.4142
+Newton(f, fp, 2, 1e-5)
+ans =
+    1.4142
+[s n] = Newton(f, fp, 2, 1e-5)
+s =
+    1.4142
+n =
+     4
+[s n] = Newton(f, fp, 5, 1e-5)
+s =
+    1.4142
+n =
+     6
+[s n] = Newton(f, fp, 50, 1e-5)
+s =
+    1.4142
+n =
+     9
+[s n] = Newton(f, fp, 500, 1e-5)
+s =
+    1.4142
+n =
+    13
+f = @(x) 3*x+sin(x)-exp(x)
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)3*x+sin(x)-exp(x)
+fp = @(x) 3+cos(x)-exp(x)
+fp =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)3+cos(x)-exp(x)
+Newton(f, fp, 0, 1e-5)
+ans =
+    0.3604
+[s n] = Newton(f, fp, 0, 1e-5)
+s =
+    0.3604
+n =
+     4
+[s n] = Newton(f, fp, 2, 1e-5)
+s =
+    1.8900
+n =
+     4
+f = sin(x)
+{Unrecognized function or variable 'x'.} 
+f = @(x) sin(x)
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)sin(x)
+fp = @(x) cos(x)
+fp =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)cos(x)
+[s n] = Newton(f, fp, 0.5, 1e-5)
+s =
+     0
+n =
+     5
+[s n] = Newton(f, fp, 0.3, 1e-5)
+s =
+     0
+n =
+     5
+[s n] = Newton(f, fp, 0.2, 1e-5)
+s =
+     0
+n =
+     4
+[s n] = Newton(f, fp, 1, 1e-5)
+s =
+     0
+n =
+     6
+[s n] = Newton(f, fp, 0, 1e-5)
+s =
+     0
+n =
+     1
+Bissection(f, -1, 1, 1e-5)
+{Unrecognized function or variable 'Bissection'.} 
+bissection(f, -1, 1, 1e-5)
+{Unable to use a value of type function_handle as an index.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m',5,0)">line 5</a>)
+if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat} 
+bissection(f, -0.2, 1, 1e-5)
+{Unable to use a value of type function_handle as an index.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m',5,0)">line 5</a>)
+if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat} 
+bissection(f, -0.2, 3, 1e-5)
+{Unable to use a value of type function_handle as an index.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m',5,0)">line 5</a>)
+if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat} 
+bissection(f, -0.2, 4, 1e-5)
+{Unable to use a value of type function_handle as an index.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m',5,0)">line 5</a>)
+if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat} 
+bissection(f, 0, 4, 1e-5)
+{Unable to use a value of type function_handle as an index.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m',5,0)">line 5</a>)
+if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat} 
+bissection(f, 0, 5, 1e-5)
+{Unable to use a value of type function_handle as an index.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m',5,0)">line 5</a>)
+if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat} 
+bissection(f, 0, 6, 1e-5)
+{Unable to use a value of type function_handle as an index.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m',5,0)">line 5</a>)
+if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat} 
+bissection(f, 0, 120, 1e-5)
+{Unable to use a value of type function_handle as an index.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m',5,0)">line 5</a>)
+if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat} 
+f(0
+ f(0
+    ↑
+{Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for
+mismatched delimiters.
+} 
+f(0)
+ans =
+     0
+f(1)
+ans =
+    0.8415
+f(3)
+ans =
+    0.1411
+f(4)
+ans =
+   -0.7568
+bissection(f, 0, 4, 1e-5)
+{Unable to use a value of type function_handle as an index.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)" style="font-weight:bold">bissection</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m',5,0)">line 5</a>)
+if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat} 
+matlab.internal.language.introspective.errorDocCallback('bissection', 'C:\Workspace\Github\ws_mathNum\Exos\S3\bissection.m', 5)
+bissection(0, 4, 1e-5, f)
+ans =
+     0
+f = @(x) 3*x+sin(x)-exp(x)
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)3*x+sin(x)-exp(x)
+fp = @(x) 3+cos(x)-exp(x)
+fp =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x)3+cos(x)-exp(x)
+[s n] = Secante(f, 1, 2, 1e-5)
+s =
+  -Inf
+n =
+     5
+ezplot(f)
+[s n] = Secante(f, 0, 1, 1e-5)
+s =
+  -Inf
+n =
+     5
+[s n] = Secante(f, 0, 1, 1e-5)
+s =
+    0.3604
+n =
+     6
+f(s)
+ans =
+   1.1080e-12
+[s n] = Secante(f, 0, 2, 1e-5)
+s =
+    1.8900
+n =
+     7
+f(s)
+ans =
+  -1.5439e-09
+[s n] = Secante(f, 0, 10, 1e-5)
+s =
+    0.3604
+n =
+     7
+[s n] = Secante(f, 0, 11, 1e-5)
+s =
+    0.3604
+n =
+     7
+[s n] = Secante(f, 0, 12, 1e-5)
+s =
+    0.3604
+n =
+     7
+[s n] = Secante(f, 0, 1, 1e-5)
+s =
+    0.3604
+n =
+     6
+ezplot(f)
+yline(0, '--')
+[s n] = Secante(f, -2, -3, 1e-5)
+s =
+    0.3604
+n =
+     9
+[s n] = Secante(f, -2, -3, 1e-5)
+s =
+    0.3604
+n =
+     9
+[s n] = Secante(f, -2, -3, 1e-6)
+s =
+    0.3604
+n =
+     9
+[s n] = Secante(f, -2, -3, 1e-99)
+s =
+    0.3604
+n =
+    12
+[s n] = Secante(f, -2, -3, 1e-990)
+s =
+    0.3604
+n =
+    12
+[s n] = Secante(f, -2, -3, 1e-999)
+s =
+    0.3604
+n =
+    12
+[s n] = Secante(f, -2, -3, 1e-9999)
+s =
+    0.3604
+n =
+    12
+s
+s =
+    0.3604
+format long
+s
+s =
+   0.360421702960324
+s*1000
+ans =
+     3.604217029603245e+02
+f(s)
+ans =
+     0
