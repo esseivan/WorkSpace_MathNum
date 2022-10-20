@@ -298,3 +298,102 @@ ans =
 f(s)
 ans =
      0
+clc
+clear
+% Résolution de système à plusieurs variables (ou implicites)
+% fonctions de plusieurs variables
+f = @(x, y) 2*x - y - exp(x)
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x,y)2*x-y-exp(x)
+g = @(x, y) 2*y - x - exp(-x)
+g =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x,y)2*y-x-exp(-x)
+g = @(x, y) 2*y - x - exp(-y)
+g =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x,y)2*y-x-exp(-y)
+f = @(x, y) 2*x - y - exp(yx)
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x,y)2*x-y-exp(yx)
+f = @(x, y) 2*x - y - exp(-x)
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x,y)2*x-y-exp(-x)
+f
+f =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x,y)2*x-y-exp(-x)
+g
+g =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(x,y)2*y-x-exp(-y)
+f(2, 1)
+ans =
+   2.864664716763387
+f(2, 3)
+ans =
+   0.864664716763387
+f(2, 4)
+ans =
+  -0.135335283236613
+f(2, 4)
+ans =
+  -0.135335283236613
+ezplot(f)
+ezplot(f)
+% Courbe de niveau 0 :
+ezplot(f)
+fplot(f)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fplot')" style="font-weight:bold">fplot</a>
+Input must be a function or functions of a single variable.} 
+ezmesh(f)
+fplot(f)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fplot')" style="font-weight:bold">fplot</a>
+Input must be a function or functions of a single variable.} 
+ezplot(f)
+hold on;
+ezplot(g)
+grid on
+exemple([0, 0])
+ans =
+    -1    -1
+exemple([0.55, 0.6])
+ans =
+  -0.076949810380487   0.101188363905973
+fsolve
+{'fsolve' requires <a href="matlab:matlab.internal.addons.launchers.showExplorer('ErrorRecovery', 'identifier', 'OP', 'focused', 'fsolve');">Optimization Toolbox</a>.} 
+matlab.internal.addons.launchers.showExplorer('ErrorRecovery', 'identifier', 'OP', 'focused', 'fsolve');
+fsolve(@exemple, [0, 0])
+{Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('exemple', 'C:\Workspace\Github\ws_mathNum\exemple.m', 4)" style="font-weight:bold">exemple</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\exemple.m',4,0)">line 4</a>)
+z = x + y;
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fsolve', 'C:\Program Files\MATLAB\R2022a\toolbox\optim\optim\fsolve.m', 264)" style="font-weight:bold">fsolve</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2022a\toolbox\optim\optim\fsolve.m',264,0)">line 264</a>)
+            fuser = feval(funfcn{3},x,varargin{:});
+Caused by:
+    Failure in initial objective function evaluation. FSOLVE cannot
+    continue.} 
+fsolve(@exemple, [0, 0])
+
+<a href = "matlab: helpview('optim','eqn_solved','CSHelpWindow');">Equation solved</a>.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the <a href = "matlab: helpview('optim','fcn_tolerance_fsolve','CSHelpWindow');">function tolerance</a>, and
+the <a href = "matlab: helpview('optim','appears_regular','CSHelpWindow');">problem appears regular</a> as measured by the gradient.
+
+<<a href = "matlab: createExitMsg({'optim:fsolve:Exit1basic','fsolve'},{'optim:fsolve:Exit1detailed','3.079079e-07','1.000000e-06','7.720656e-14','1.000000e-03'},true,true);;">stopping criteria details</a>>
+ans =
+    0.5671    0.5671
+fzero(@exemple, [0, 0])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fzero>localFirstFcnEval')" style="font-weight:bold">fzero>localFirstFcnEval</a>
+FZERO cannot continue because user-supplied function_handle ==>
+exemple failed with the error below.
+
+ Index exceeds the number of array elements. Index must not exceed 1.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fzero', 'C:\Program Files\MATLAB\R2022a\toolbox\matlab\optimfun\fzero.m', 245)" style="font-weight:bold">fzero</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2022a\toolbox\matlab\optimfun\fzero.m',245,0)">line 245</a>)
+    fa = localFirstFcnEval(FunFcn,FunFcnIn,a,varargin{:});} 
+solve(@exemple, [0, 0])
+{Check for incorrect argument data type or missing argument in call to
+function 'solve'.} 
