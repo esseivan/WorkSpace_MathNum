@@ -1,4 +1,7 @@
 function F = exemple(X)
+% Fonction d'exemple pour trouver des zéros par la méthode de Newton avec
+% une fonction implicite ou à plusieurs variables. Doit être donnée en
+% paramètre avec la fonction fsolve, par exemple : fsolve(@exemple, [0,0])
 % X : composantes x et y
 % x = X(1)
 % y = X(2)
