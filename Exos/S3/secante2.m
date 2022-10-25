@@ -1,4 +1,4 @@
-function [s, n] = Secante(f, x0, x1, tol)
+function [s, n] = secante(f, x0, x1, tol)
 % f: f(x) dont on cherche le zéro
 % x0 : point de départ 0
 % x1 : point de départ 1
