@@ -1,4 +1,4 @@
-function [s, n] = Newton(f, fp, x0, tol)
+function [s, n] = newton(f, fp, x0, tol)
 % f: f(x) dont on cherche le zéro
 % fp : f'(x)
 % x0 : point de départ
