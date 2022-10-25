@@ -1,5 +1,5 @@
 % Ex1
-clear;clc;
+clear;clc;close all;
 
 f = @(x) exp(x) - 4*x;
 ezplot(f); % pour visualiser les 0
