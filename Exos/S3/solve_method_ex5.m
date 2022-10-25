@@ -1,4 +1,4 @@
-function F = exemple(X)
+function F = solve_method_ex5(X)
 % Fonction d'exemple pour trouver des zéros par la méthode de Newton avec
 % une fonction implicite ou à plusieurs variables avec l'aide de fsolve.
 % Doit être donnée en paramètre avec la fonction fsolve
@@ -10,8 +10,8 @@ function F = exemple(X)
 
 x = X(1); y = X(2);
 
-f = 2*x - y - exp(-x);
-g = 2*y - x - exp(-y);
+f = x^2 + y^2 - 4;
+g = x^2 - y^2 - 1;
 
 F = [f g];
 

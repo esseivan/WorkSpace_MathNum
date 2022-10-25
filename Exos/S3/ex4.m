@@ -1,5 +1,5 @@
 % Ex 4
-
+clear;clc;close all;
 
 f1 = @(x) exp(x) - 4*x;
 f2 = @(x) x - tan(x);
