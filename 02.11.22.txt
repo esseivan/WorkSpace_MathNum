@@ -1,0 +1,323 @@
+A = [2 4 2; -1 0 -4; 2 2 -1]
+A =
+     2     4     2
+    -1     0    -4
+     2     2    -1
+B = [3 -1 5]
+B =
+     3    -1     5
+B = B'
+B =
+     3
+    -1
+     5
+% on cherche x tel que A*x = B
+x = A\B
+x =
+    2.6667
+   -0.3750
+   -0.4167
+x = inv(A)*B
+x =
+    2.6667
+   -0.3750
+   -0.4167
+% le \ ne calcule pas l'inverse de la matrice A
+A = [1 2 3 4; 5 6 7 8; 9 10 11 12; 13 14 15 16]
+A =
+     1     2     3     4
+     5     6     7     8
+     9    10    11    12
+    13    14    15    16
+factorial(100)
+ans =
+  9.3326e+157
+inv([7])
+ans =
+    0.1429
+ans*21
+ans =
+     3
+A = [10,-7,0;-3,2,6;5,-1,5]
+A =
+    10    -7     0
+    -3     2     6
+     5    -1     5
+% A = LU
+A = [10,-7,0;-3,2,6;5,-1,5]
+A =
+    10    -7     0
+    -3     2     6
+     5    -1     5
+L = [1 0 0; -0.3,1,0; 0.5,-25,1]
+L =
+    1.0000         0         0
+   -0.3000    1.0000         0
+    0.5000  -25.0000    1.0000
+U = [10,-7,0; 0,-0.1,6; 0,0,155]
+U =
+   10.0000   -7.0000         0
+         0   -0.1000    6.0000
+         0         0  155.0000
+L*U
+ans =
+    10    -7     0
+    -3     2     6
+     5    -1     5
+A
+A =
+    10    -7     0
+    -3     2     6
+     5    -1     5
+A == L*U
+ans =
+  3×3 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+   1   1   1
+   1   1   1
+   1   1   1
+import ./ncm
+{Error: Unable to find or import './ncm'. Imported names must end with '.*' or be fully qualified.} 
+import ncm
+{Error: Unable to find or import 'ncm'. Imported names must end with '.*' or be fully qualified.} 
+import ncm/.*
+lugui(A)
+{'lugui' is not found in the current folder or on the MATLAB path, but exists in:
+    C:\Workspace\Github\ws_mathNum\ncm
+
+<a href = "matlab:matlab.internal.language.commandline.executeCode('cd ''C:\Workspace\Github\ws_mathNum\ncm''')">Change the MATLAB current folder</a> or <a href = "matlab:matlab.internal.language.commandline.executeCode('addpath ''C:\Workspace\Github\ws_mathNum\ncm''')">add its folder to the MATLAB path</a>.} 
+matlab.internal.language.commandline.executeCode('addpath ''C:\Workspace\Github\ws_mathNum\ncm''')
+addpath 'C:\Workspace\Github\ws_mathNum\ncm'
+lugui(A)
+lugui
+lugui
+lugui
+lugui(A)
+clc
+det(A)
+ans =
+ -155.0000
+det(L)
+ans =
+     1
+det(U)
+ans =
+  -155
+L
+L =
+    1.0000         0         0
+   -0.3000    1.0000         0
+    0.5000  -25.0000    1.0000
+U
+U =
+   10.0000   -7.0000         0
+         0   -0.1000    6.0000
+         0         0  155.0000
+clc
+A
+A =
+    10    -7     0
+    -3     2     6
+     5    -1     5
+B
+B =
+     3
+    -1
+     5
+B = [7;4;6¨]
+ B = [7;4;6¨]
+           ↑
+{Error: Invalid text character. Check for unsupported symbol, invisible character, or pasting of non-ASCII
+characters.
+} 
+B = [7;4;6]
+B =
+     7
+     4
+     6
+L
+L =
+    1.0000         0         0
+   -0.3000    1.0000         0
+    0.5000  -25.0000    1.0000
+U
+U =
+   10.0000   -7.0000         0
+         0   -0.1000    6.0000
+         0         0  155.0000
+x = A\B
+x =
+     0
+    -1
+     1
+% En utilisant L et U
+Y = L\B
+Y =
+    7.0000
+    6.1000
+  155.0000
+x = U\Y
+x =
+    0.0000
+   -1.0000
+    1.0000
+lugui(A)
+lugui(A)
+L = [1 0 0; 0.5,1,0; -0.3,-0.4,1]
+L =
+    1.0000         0         0
+    0.5000    1.0000         0
+   -0.3000   -0.4000    1.0000
+[L, U, P] = lu(A)
+L =
+    1.0000         0         0
+    0.5000    1.0000         0
+   -0.3000   -0.0400    1.0000
+U =
+   10.0000   -7.0000         0
+         0    2.5000    5.0000
+         0         0    6.2000
+P =
+     1     0     0
+     0     0     1
+     0     1     0
+[L, U] = lu(A)
+L =
+    1.0000         0         0
+   -0.3000   -0.0400    1.0000
+    0.5000    1.0000         0
+U =
+   10.0000   -7.0000         0
+         0    2.5000    5.0000
+         0         0    6.2000
+% Tenir compte des permutations
+[L, U, P] = lu(A)
+L =
+    1.0000         0         0
+    0.5000    1.0000         0
+   -0.3000   -0.0400    1.0000
+U =
+   10.0000   -7.0000         0
+         0    2.5000    5.0000
+         0         0    6.2000
+P =
+     1     0     0
+     0     0     1
+     0     1     0
+b
+{Unrecognized function or variable 'b'.} 
+B
+B =
+     7
+     4
+     6
+P*B
+ans =
+     7
+     6
+     4
+Y = L\(P*B)
+Y =
+    7.0000
+    2.5000
+    6.2000
+x = U\Y
+x =
+     0
+    -1
+     1
+L*U
+ans =
+   10.0000   -7.0000         0
+    5.0000   -1.0000    5.0000
+   -3.0000    2.0000    6.0000
+A
+A =
+    10    -7     0
+    -3     2     6
+     5    -1     5
+P*A
+ans =
+    10    -7     0
+     5    -1     5
+    -3     2     6
+A
+A =
+    10    -7     0
+    -3     2     6
+     5    -1     5
+b
+{Unrecognized function or variable 'b'.} 
+B
+B =
+     7
+     4
+     6
+clc
+b = B
+b =
+     7
+     4
+     6
+clc
+% Au TE, à faire
+A
+A =
+    10    -7     0
+    -3     2     6
+     5    -1     5
+B
+B =
+     7
+     4
+     6
+% On résout via PA = LU
+[L, U, P] = lu(A)
+L =
+    1.0000         0         0
+    0.5000    1.0000         0
+   -0.3000   -0.0400    1.0000
+U =
+   10.0000   -7.0000         0
+         0    2.5000    5.0000
+         0         0    6.2000
+P =
+     1     0     0
+     0     0     1
+     0     1     0
+% On trouve Ly = Pb
+Pb = P*b
+Pb =
+     7
+     6
+     4
+y = L\Pb
+y =
+    7.0000
+    2.5000
+    6.2000
+x = U\y
+x =
+     0
+    -1
+     1
+clc
+lugui
+lugui(A)
+lugui(A)
+lugui
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.control.UIControl/get')" style="font-weight:bold">matlab.ui.control.UIControl/get</a>
+Invalid or deleted object.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lugui', 'C:\Workspace\Github\ws_mathNum\ncm\lugui.m', 152)" style="font-weight:bold">lugui</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\ncm\lugui.m',152,0)">line 152</a>)
+         if get(quit,'value') == 1, break, end} 
+lugui
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.control.UIControl/get')" style="font-weight:bold">matlab.ui.control.UIControl/get</a>
+Invalid or deleted object.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lugui', 'C:\Workspace\Github\ws_mathNum\ncm\lugui.m', 152)" style="font-weight:bold">lugui</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\ncm\lugui.m',152,0)">line 152</a>)
+         if get(quit,'value') == 1, break, end} 
+lugui(7)
+lugui
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.control.UIControl/get')" style="font-weight:bold">matlab.ui.control.UIControl/get</a>
+Invalid or deleted object.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lugui', 'C:\Workspace\Github\ws_mathNum\ncm\lugui.m', 152)" style="font-weight:bold">lugui</a> (<a href="matlab: opentoline('C:\Workspace\Github\ws_mathNum\ncm\lugui.m',152,0)">line 152</a>)
+         if get(quit,'value') == 1, break, end} 
+lugui
