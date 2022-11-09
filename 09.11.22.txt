@@ -1,0 +1,113 @@
+% Erreur et residus
+% Normes vectorielles
+x = [1 -2 3 7]';
+x
+
+x =
+
+     1
+    -2
+     3
+     7
+
+norm(x)
+
+ans =
+
+    7.9373
+
+norm(x,2)
+
+ans =
+
+    7.9373
+
+norm(x,3)
+
+ans =
+
+    7.2368
+
+norm(x,4)
+
+ans =
+
+    7.0704
+
+norm(x, 1)
+
+ans =
+
+    13
+
+norm(x, inf)
+
+ans =
+
+     7
+
+% Normes les plus utilisées : 1, 2, inf
+format default;
+format compact;
+x
+x =
+     1
+    -2
+     3
+     7
+A = [1 -2 3; 4 5 -6; 7 8 9]
+A =
+     1    -2     3
+     4     5    -6
+     7     8     9
+% Quelle est la longueur de cette matrice ?
+norm(A, 'fro') % racine carree de chaque element au carre 1 a 1
+ans =
+   16.8819
+sqrt(sum(A.^2))
+ans =
+    8.1240    9.6437   11.2250
+sum(A.^2)
+ans =
+    66    93   126
+A.^2
+ans =
+     1     4     9
+    16    25    36
+    49    64    81
+sum(A)
+ans =
+    12    11     6
+sum(ans)
+ans =
+    29
+sqrt(ans)
+ans =
+    5.3852
+norm(A, 'fro') % racine carree de la somme de chaque element
+ans =
+   16.8819
+sqrt(1+4+9+16+25+36+49+64+81)
+ans =
+   16.8819
+norm(A, 1)
+ans =
+    18
+norm(A, 2)
+ans =
+   14.0332
+norm(A, inf)
+ans =
+    24
+norm(A, 3)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('norm')" style="font-weight:bold">norm</a>
+When the first input is a matrix, the second input must be 1, 2, inf, or 'fro'.  When the first input is a
+vector, the second input must be a positive real-valued scalar, inf, -inf, or 'fro'.} 
+clc
+norm(A, 1)
+ans =
+    18
+norm(A, inf)
+ans =
+    24
+diary off
