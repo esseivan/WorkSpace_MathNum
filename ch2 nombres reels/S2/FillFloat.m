@@ -16,7 +16,7 @@ for c=0:(base^n-1)
 end
 
 Mantisse2 = [];
-for a0=1:(base-1)
+for a0=0:(base-1)
     Mantisse2 = [Mantisse2 (a0+Mantisse)];
 end
 
@@ -30,6 +30,6 @@ Result = transpose(Result);
 %plot(Result, 0, 'b.', 'MarkerSize', 1, 'Marker','o')
 
 epsilon = Mantisse(2)
-MinValue = Result(1)
+MinValue = Result(2)
 MaxValue = Result(length(Result))
 
