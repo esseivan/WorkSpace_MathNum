@@ -1,4 +1,4 @@
-function sol = bissection(x0, x1, tol, f)
+function [sol, n] = bissection(x0, x1, tol, f)
 % Recherche de 0 de la fonction f entre x0 et x1 avec la tolérance définie
 % par tol. La méthode de recherche est par bissection.
 
@@ -7,6 +7,7 @@ if(f(x0)*f(x1) > 0) % f(a) et f(b) de meme signes => pas de resultat
     return;
 end
 
+n = 0;
 c = NaN;
 while 1
     %disp("f(c) = " + num2str(f(c))); % pour debug
@@ -25,6 +26,7 @@ while 1
     else  % f(b) et f(c) de meme signes
         x1 = c;
     end
+    n = n+1;
 
     % Condition de sortie par erreur relative
     cond = abs(x1-x0);
