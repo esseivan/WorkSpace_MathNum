@@ -13,13 +13,13 @@ function F=floatgui(callbackarg)
 % Initialize parameters
 
 if nargin == 0
-   t = 3;
+   n = 3;
    emin = -2;
    emax = 2;
    logscale = 0;
    Fpos=[50 300 900 250];
 else
-   t = round(get(findobj('tag','t'),'value'));
+   n = round(get(findobj('tag','n'),'value'));
    emin = round(get(findobj('tag','emin'),'value'));
    emax = round(get(findobj('tag','emax'),'value'));
    logscale = get(findobj('style','check'),'value');
@@ -36,7 +36,7 @@ set(gcf,'pos',Fpos,'name','floatgui', ...
 
 % Generate and plot floating point numbers
 
-f = (0:2^t-1)/2^t;
+f = (0:2^n-1)/2^n;
 F = [];
 for e = emin:emax
    F = [F (1+f)*2^e];
@@ -103,7 +103,7 @@ uicontrol('style','slider','tag','emin','value',emin, ...
    'min',-8,'max',0,...
    'pos',[0.15 0.26 0.13 0.07],'sliderstep',[1/8 1/8], ...
    'callback','floatgui(1)');
-uicontrol('style','slider','tag','t','value',t, ...
+uicontrol('style','slider','tag','n','value',n, ...
    'min',0,'max',8,...
    'pos',[0.435 0.26 0.13 0.07],'sliderstep',[1/8 1/8], ...
    'callback','floatgui(1)');
@@ -113,7 +113,7 @@ uicontrol('style','slider','tag','emax','value',emax, ...
    'callback','floatgui(1)');
 uicontrol('style','text','string',['emin = ' int2str(emin)], ...
    'pos',[0.15 0.35 0.13 0.07],'fontunits','normalized','fontsize',0.7)
-uicontrol('style','text','string',['t = ' int2str(t)], ...
+uicontrol('style','text','string',['n = ' int2str(n)], ...
    'pos',[0.435 0.35 0.13 0.07],'fontunits','normalized','fontsize',0.7)
 uicontrol('style','text','string',['emax = ' int2str(emax)], ...
    'pos',[0.72 0.35 0.13 0.07],'fontunits','normalized','fontsize',0.7)
@@ -127,7 +127,7 @@ uicontrol('style','push','pos',[0.88 0.1 0.07 0.07], ...
 % eps
 
 if fmax > 1
-   eps = 2^(-t);
+   eps = 2^(-n);
    text(1,0,'|','color','r','fontunits','normalized','fontsize',0.3)
    text(1+eps,0,'|','color','r','fontunits','normalized','fontsize',0.3)
    if eps < 1
@@ -146,8 +146,8 @@ end
 
 % Nombre de 'nombres' possibles.
 % Dependance p.r. a la mantisse
-% Mantisse de m => 2^n nombres
+% Mantisse de n => 2^n nombres
 % Exposant : On multiplie le resultat ci-dessus par le nombre d'exposants
 %   differents possibles. Si emin est -2 et emax 2 on aura 5 possibilites
-text(.9*xmax,2,num2str((2^t)*(-emin + emax + 1)))
+text(.9*xmax,2,num2str((2^n)*(-emin + emax + 1)))
 %verif = (2^52)*(-1022+1023+1)
