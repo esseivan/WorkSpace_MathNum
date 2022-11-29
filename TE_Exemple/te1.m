@@ -9,6 +9,17 @@ clear;clc;close;
 f = @(x) x^3 - x^2 + sin(x+3)
 ezplot(f, [-2 2])
 yline(0, 'k--');
+grid on;
+
+x1 = bissection(-2, 0, 1e-6, f);
+x2 = bissection(0, 1, 1e-6, f);
+x3 = bissection(1, 2, 1e-6, f);
+
+fp = @(x) 3*x^2 - 2*x + cos(x+3);
+
+x1 = newton(f, fp, -1, 1e-6);
+x2 = newton(f, fp, 0, 1e-6);
+x3 = newton(f, fp, 0, 1e-6);
 
 x1 = fzero(f, -1)
 x2 = fzero(f, 0)
