@@ -1,3 +1,7 @@
+%% Ex 1
+
+run float_list.mlx
+
 %% Ex 2
 
 clear;clc;close;
@@ -14,6 +18,36 @@ x3 = fzero(f, 1.5)
 f(x1)
 f(x2)
 f(x3)
+
+%% Ex 3
+clear;clc;close;
+
+x0 = 1;
+
+f  = @(x) 5*x^3 + 2*x - 1;
+fp = @(x) 15*x^2 + 2;
+fs = @(x) 30*x;
+
+g = @(x) x - (2*f(x)*fp(x))/(2*(fp(x))^2 - f(x)*fs(x));
+
+x_km1 = 0;
+x_k = x0;
+
+fprintf("Resultat : \n");
+fprintf('\tx%d = %f\n', 0, x_k);
+count = 3;
+result = zeros(count, 1);
+for l=1:count
+    x_km1 = x_k;
+    x_k = g(x_km1);
+    result(l) = x_k;
+    fprintf('\tx%d = %f\n', l, x_k);
+end
+
+% x1 = result(1)
+% x2 = result(2)
+% x3 = result(3)
+
 
 %% Ex 4
 clear;clc;close;
