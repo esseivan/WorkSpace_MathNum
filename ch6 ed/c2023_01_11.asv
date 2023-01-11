@@ -1,7 +1,0 @@
-%% Cours 11.01.23 : réduction d'ordre d'équations différentielles
-
-
-yo = [0; 0];
-tspan = [0; 20];
-
-od
