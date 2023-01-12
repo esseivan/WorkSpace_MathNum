@@ -12,5 +12,5 @@ plot(t, y);
 %% Corrigé
 
 % ??? pas du tout la meme chose. L pas le meme, jusqua 100 s et pas 100 ms
-[t, w] = ode45(@circuit, [0, 100], [0; 0]);
-plot(t, w);
+[t, w] = ode45(@circuit, linspace(0, 0.1, 1e3), [0; 0]);
+plot(t, w, '-');
