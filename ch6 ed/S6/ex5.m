@@ -5,7 +5,7 @@ dy = @(t, y) y - 2*t;
 
 n = 4;
 h = 0.5;
-t0 = 0;
+t0 = 1;
 y0 = 0;
 
 tspan = [t0, t0+n*h];
@@ -13,5 +13,6 @@ tspan = [t0, t0+n*h];
 [t_005, y_005] = Euler(dy, tspan, y0, h/10)
 
 plot(t, y, 'o-', t_005, y_005, 'x-');
+yline(0);xline(0);
 legend("h = 0.5","h = 0.05");
 
